@@ -23,6 +23,9 @@ class Plugin {
 
 		// Load plugin classes.
 		Assets::get_instance();
+		Cart_Notification::get_instance();
+		Frontend::get_instance();
+		Options::get_instance();
 	}
 
 }

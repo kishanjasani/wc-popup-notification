@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       WooCommerce Popup Notification
- * Plugin URI:        https://github.com
+ * Plugin URI:        https://github.com/kishanjasani/wc-popup-notification
  * Description:       Displays add to cart notifications in a popup when a product is added to the cart.
  * Requires at least: 6.0
  * Requires PHP:      7.4
