@@ -49,17 +49,12 @@ class Cart_Notification {
 		// Remove last added key from the database.
 		delete_option( 'wpn_last_added_cart_key' );
 
-		$args = array(
-			'cart_item_key' => $cart_item_key,
-		);
-
 		ob_start();
-		wc_get_template( 'popup.php', $args, '', WPN_PLUGIN_PATH . '/templates/' );
-		// include_once WPN_PLUGIN_PATH . '/templates/popup.php';
+		include_once WPN_PLUGIN_PATH . '/templates/popup.php';
 
-		$notice = ob_get_clean();
+		$output = ob_get_clean();
 
-		$fragments['div.wpn-modal'] = $notice;
+		$fragments['div.wpn-modal__content'] = $output;
 
 		return $fragments;
 	}

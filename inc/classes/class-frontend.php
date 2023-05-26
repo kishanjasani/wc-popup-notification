@@ -31,6 +31,21 @@ class Frontend {
 		?>
 		<div class="wpn-modals">
 			<div class="wpn-modal">
+				<div class="wpn-modal__header">
+					<h3><?php esc_html_e( 'Add to cart', 'wc-popup-notification' ); ?></h3>
+					<span>&#10006;</span>
+				</div>
+				<div class="wpn-modal__content">
+				</div>
+				<div class="wpn-modal__footer">
+					<?php
+					// Get the cart URL.
+					$cart_url = wc_get_cart_url();
+
+					// Output the cart link.
+					printf( '<a href="%1$s" class="button wp-element-button add_to_cart_button">%2$s</a>', esc_url( $cart_url ), esc_html__( 'VIEW CART', 'wc-popup-notification' ) );
+					?>
+				</div>
 			</div>
 		</div>
 		<?php
