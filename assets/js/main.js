@@ -5,6 +5,7 @@
 	// Open cart popup.
 	function open_popup() {
 		var popup        = $( '.wpn-modal' );
+		var prod_img     = $( '.wpn-modal__content' ).data( 'prod-img' );
 		var timeout_data = $( '.wpn-modals' ).data( 'timeout' );
 		var timeout_val  = parseInt( timeout_data ) * 1000;
 
@@ -14,7 +15,12 @@
 
 		popup.addClass( 'wpn-modal-active' );
 
-		// Close the popup after 5 seconds.
+		if ( prod_img ) {
+			popup.addClass( 'wpn-modal-bgimg' );
+			popup.css( 'background-image', 'url(' + prod_img + ')' )
+		}
+
+		// Close the popup after selected seconds.
 		timeoutId = setTimeout( function() {
 			popup.removeClass( 'wpn-modal-active' );
 			$( '.wpn-modal__content' ).html( '' );

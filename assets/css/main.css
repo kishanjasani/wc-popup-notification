@@ -3,6 +3,7 @@
 	flex-direction: column;
 	position: fixed;
 	right: 40px;
+	width: 300px;
 	max-width: 300px;
 	max-height: 100%;
 	z-index: 99999;
@@ -77,4 +78,10 @@
 
 .wpn-modal-active {
 	display: block;
+}
+
+.wpn-modal-bgimg {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
