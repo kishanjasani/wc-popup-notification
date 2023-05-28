@@ -33,7 +33,7 @@ class Frontend {
 			<div class="wpn-modal">
 				<div class="wpn-modal__header">
 					<h3><?php esc_html_e( 'Add to cart', 'wc-popup-notification' ); ?></h3>
-					<span>&#10006;</span>
+					<span class="wpn-modal__close">&#10006;</span>
 				</div>
 				<div class="wpn-modal__content">
 				</div>
