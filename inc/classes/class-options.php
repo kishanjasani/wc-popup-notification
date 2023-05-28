@@ -157,7 +157,6 @@ class Options {
 	public function close_after_seconds_callback() {
 		$options = get_option( 'wpn_basic_options', [] );
 		$seconds = isset( $options['close_after_seconds'] ) ? $options['close_after_seconds'] : 5;
-		$seconds = apply_filters( 'wpn_close_after_seconds', $seconds );
 		?>
 
 		<input type="number" name="wpn_basic_options[close_after_seconds]" value="<?php echo esc_attr( $seconds ); ?>">
